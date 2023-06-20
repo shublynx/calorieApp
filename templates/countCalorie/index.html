@@ -81,12 +81,36 @@
                                     <td id="totalProtien"><b></b></td>
                                     <td id="totalFats"><b></b></td>
                                     <td id="totalCalories"><b></b></td>
-
-
                                 </tr>
+
 
                     </table>
                 </div>
         </div>
     </body>
+<script>
+
+    var table = document.getElementById("table");
+    var carbs=0,protein=0,fats=0,calories=0;
+
+    for(var i=1;i<table.rows.length-1;i++){
+        console.log(table.rows[i].cells[1].innerHTML);
+        carbs +=parseFloat(table.rows[i].cells[1].innerHTML);
+        carbs = Math.round(carbs);
+        protein+= parseFloat(table.rows[i].cells[2].innerHTML);
+        protein = Math.round(protein)
+        fats+= parseFloat(table.rows[i].cells[3].innerHTML);
+        fats = Math.round(fats);
+        calories+= parseFloat(table.rows[i].cells[4].innerHTML);
+        calories = Math.round(calories);
+    }
+    document.getElementById("totalCarbs").innerHTML = '<b>' + carbs+'(gm)</b>';
+
+    document.getElementById("totalProtien").innerHTML ='<b>' + protein+'(gm)</b>';
+
+    document.getElementById("totalFats").innerHTML = '<b>' +fats+'(gm)</b>';
+
+    document.getElementById("totalCalories").innerHTML = '<b>' +calories+'(Kcal)</b>';
+
+</script>
 </html>
