@@ -18,5 +18,6 @@ from django.urls import path
 from countCalorie import views
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("",views.index,name='view')
+    path("",views.index,name='view'),
+    path("delete/<int:id>/",views.delete_consume,name='delete')
 ]
