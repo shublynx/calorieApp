@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+  <title>Calorie Tracker App</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0/css/bootstrap.min.css">
+  <style>
+    body {
+      background-image: url("{% static 'images/background.jpg' %}");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      opacity: 0.9;
+    }
+
+    .container {
+      text-align: left;
+      margin-top: 20%;
+      color: #ffffff;
+      font-family: "Comic Sans MS", cursive;
+    }
+
+    .btn-group {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .benefits {
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+
+    .benefits ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+
+    .benefits li:before {
+      content: "\2022";
+      color: #ffffff;
+      font-weight: bold;
+      display: inline-block;
+      width: 1em;
+      margin-left: -1em;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Welcome to the Calorie Tracker App</h1>
+
+    <div class="benefits">
+      <h3>Health Benefits:</h3>
+      <p>Calorie tracking helps you:</p>
+      <ul>
+        <li>Lose weight</li>
+        <li>Maintain a healthy diet</li>
+        <li>Reach fitness goals</li>
+        <li>Monitor nutritional intake</li>
+      </ul>
+    </div>
+
+    <div class="btn-group">
+      <!-- Login Button -->
+      <a href="/login" class="btn btn-primary">Login</a>
+      <!-- Register Button -->
+      <a href="/register" class="btn btn-danger">Register</a>
+    </div>
+  </div>
+
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0/js/bootstrap.min.js"></script>
+</body>
+</html>
