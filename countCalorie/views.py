@@ -29,8 +29,8 @@ def delete_consume(request, id):
     consumed_food = Consume.objects.get(id=id)
     if request.method == 'POST':
         consumed_food.delete()
-        return redirect('/')
-    return render(request, 'countCalorie/delete.html')
+        return redirect('login/index/')
+    return redirect('/login/index')
 
 
 
@@ -49,7 +49,7 @@ def register(request):
         user = authenticate(username=username, password=password)
         login(request, user)
 
-        return redirect('index')
+        return redirect('/')
     return render(request, 'auth/register.html')
 
 def user_login(request):
