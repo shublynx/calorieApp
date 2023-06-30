@@ -12,7 +12,7 @@
                     <nav class="navbar navbar-dark bg-info">
                         <span class="navbar-brand">Calorie Tracker</span>
                         <form action="/logout/" method="post" class="logout-btn">
-      {% csrf_token %}
+                            {% csrf_token %}
       <button type="submit" class="btn btn-danger" name="logoutbtn">Logout</button>
     </form>
                     </nav>
@@ -48,7 +48,7 @@
                                          <option value="{{food.name}}">{{food.name}}</option>
                                         {% endfor %}
                                 </select>
-                                <button class="btn btn-warning" type="submit">Add</button>
+
                             </div>
                         </form>
                 </div>
